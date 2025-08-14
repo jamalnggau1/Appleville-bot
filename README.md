@@ -37,8 +37,8 @@ Bot ini dapat melakukan otomatisasi seperti:
 
 ### 1. Clone repository
 ```bash
-git clone https://github.com/username/appleville-bot.git
-cd appleville-bot
+git clone https://github.com/jamalnggau1/Appleville-bot
+cd Appleville-bot
 ```
 
 ### 2. Install dependencies
@@ -60,19 +60,36 @@ Contoh:
     "name": "Akun Utama",
     "cookie": "COOKIE_DI_SINI",
     "plants": [
-      {"slotIndex": 0, "seedKey": "seed_apple", "grow_time": 3600},
-      {"slotIndex": 1, "seedKey": "seed_apple", "grow_time": 3600}
+      {"slotIndex": 1, "seedKey": "seed_apple", "grow_time": 3600},
+      {"slotIndex": 2, "seedKey": "seed_apple", "grow_time": 3600}
     ],
     "auto_buy_plot": {"enabled": true},
     "auto_exchange": {"enabled": true, "key": "exchange_item_key"},
     "auto_fertilise": {
       "enabled": true,
       "strategies": [
-        {"apply_to_slots": [0, 1], "modifierKey": "fertiliser"}
+        {"apply_to_slots": [1, 2], "modifierKey": "fertiliser"}
+      ]
+    }
+  },
+  {
+    "name": "Akun Kedua",
+    "cookie": "COOKIE_AKUN_2",
+    "plants": [
+      {"slotIndex": 1, "seedKey": "seed_orange", "grow_time": 7200},
+      {"slotIndex": 2, "seedKey": "seed_orange", "grow_time": 7200}
+    ],
+    "auto_buy_plot": {"enabled": true},
+    "auto_exchange": {"enabled": true, "key": "exchange_item_key_2"},
+    "auto_fertilise": {
+      "enabled": true,
+      "strategies": [
+        {"apply_to_slots": [1, 2], "modifierKey": "fertiliser"}
       ]
     }
   }
 ]
+
 ```
 
 ### 4. Jalankan bot
